@@ -1,0 +1,7 @@
+os
+beautifulsoup4
+urllib
+webbrowser
+time
+random
+tqdm
