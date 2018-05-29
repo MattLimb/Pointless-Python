@@ -5,3 +5,6 @@ webbrowser
 time
 random
 tqdm
+hashlib
+binascii
+time
