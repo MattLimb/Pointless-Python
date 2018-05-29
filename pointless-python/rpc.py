@@ -64,6 +64,7 @@ def main(firstrun, cpu_score, user_score):
     if firstrun!= True:
         scores_table(cpu_score, user_score)
         winner = game()
+
         if winner != "Draw!":
             if winner == "cpu":
                 cpu_score += 1
@@ -74,11 +75,3 @@ def main(firstrun, cpu_score, user_score):
 cpu_score = 0
 user_score = 0
 main(False, cpu_score, user_score)
-
-
-
-'''
-TO DO:
-Add a choice at the end of each round: "Ready?"
-Add two user play
-'''
