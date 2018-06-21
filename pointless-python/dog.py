@@ -44,7 +44,7 @@ stop = False
 
 while stop == False:
     if firstrun == True:
-        yn = input("Do you want to see a dog?\n")
+        yn = input("Do you want to see a dog? (y/n)\n")
         if (yn == "y") or (yn == "Y"):
             firstrun = False
             all_images = []
@@ -54,7 +54,7 @@ while stop == False:
             stop = True
             #clear()
     elif firstrun == False:
-        yn = input("Do you want to see another dog?\n")
+        yn = input("Do you want to see another dog? (y/n)\n")
         if (yn == "y") or (yn == "Y"):
             firstrun = False
             all_images = []

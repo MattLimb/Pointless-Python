@@ -8,7 +8,7 @@ def main(*args):
             print("Checking " + str(x) + "...")
             __import__(x)
         except ModuleNotFoundError:
-            command = "pip3 install " + str(x)
+            command = "sudo pip3 install " + str(x)
             subprocess.Popen(command, shell=True, executable='/bin/bash').wait()
 
 
