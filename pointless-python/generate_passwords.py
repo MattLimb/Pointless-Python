@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #Generate Password
-import random, hashlib, binascii, time
+import random, hashlib, binascii, time, os
 from tqdm import tqdm
 
 def generate(passwd_length=8, hash_algorithm='sha512', salt="password_salt"):
@@ -31,13 +31,16 @@ def imp():
     print("Generating....")
     for x in tqdm(range(0, 101)):
         user_passwds, user_hashed = generate(passwd_length=8, hash_algorithm='sha256', salt=time.time())
-        compare(user_hashed)
+        if os.path.exists("./passwords.txt"):
+            compare(user_hashed)
         user_hash.append(user_hashed)
         user_passwd.append(user_passwds)
         
     print("\nWriting....")
-    f = open('passwords.txt', 'w')
+    f = open("passwords.txt", "w")
     for i in tqdm(range(0, len(user_hash))):
         f.write(str("Passwd: " + user_passwd[i] + "\n"))
         f.write(str("Stored: " + user_hash[i] + "\n\n"))
     f.close()
+
+imp()
