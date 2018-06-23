@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 #Rotary
 
 def add_rotatory(plain_text, rot_factor=13):
