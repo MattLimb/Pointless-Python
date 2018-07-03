@@ -73,6 +73,7 @@ def game(check_scores, options, player_score, cpu_score, player2_score=None):
         print(scores(player=player_score, player2=player2_score))
         try:
             player1_input = options[str(int(input("\nPlayer 1 Please Choose an Option (1, 2, 3):\n1: Rock\n2: Paper\n3: Scissors\n\nYour Choice: ")))]
+            clear()
             player2_input = options[str(int(input("\nPlayer 2 Please Choose an Option (1, 2, 3):\n1: Rock\n2: Paper\n3: Scissors\n\nYour Choice: ")))]
         except:
             clear()
